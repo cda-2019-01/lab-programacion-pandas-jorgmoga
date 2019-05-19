@@ -5,6 +5,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-tb1 = pd.read_csv("tbl0.tsv", sep="\t")
+tb = pd.read_csv("tbl0.tsv", sep="\t")
 ##tb1.head()
-tb1.groupby('_c1').['_c2']mean()
+tb1=tb.groupby('_c1')['_c2'].mean()
+print(tb1)
