@@ -3,5 +3,8 @@
 ## y tbl2.tsv, compute la suma de tbl2._c5b por cada
 ## valor en tbl0._c1.
 ## 
-
-
+import pandas as pd
+import numpy as np
+tb = pd.read_csv('tbl2.tsv', sep='\t')
+tb12=tb.groupby('_c5a')['_c5b'].sum()
+print(tb12)
