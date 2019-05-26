@@ -9,6 +9,6 @@ tb = pd.read_csv("tbl0.tsv", sep="\t")
 dfaux = tb.groupby('_c1')['_c2'].apply(list)
 tb9 = pd.DataFrame()
 tb9['_c1'] = dfaux.keys()
-tb9['_c2'] = [elem for elem in dfaux]
-tb9['_c2'] = [":".join(str(v) for v in sorted(elem)) for elem in tb9['_c2']]
+tb9['lista'] = [elem for elem in dfaux]
+tb9['lista'] = [":".join(str(v) for v in sorted(elem)) for elem in tb9['lista']]
 print(tb9)
